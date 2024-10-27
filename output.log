@@ -1,0 +1,125 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.0.0.1
+gem5 compiled Oct 27 2024 12:09:43
+gem5 started Oct 27 2024 14:55:54
+gem5 executing on z3r0s-MacBook-Pro.local, pid 15753
+command line: ./build/X86/gem5.opt --debug-flags=Terminal,Exec ilp_simulation.py
+
+--- Running benchmark: tests/test-progs/hello/bin/x86/linux/hello ---
+
+Simulation without branch prediction:
+Beginning simulation for tests/test-progs/hello/bin/x86/linux/hello!
+Exiting @ tick 1234567 because target called exit()
+
+Simulation statistics:
+Instructions per cycle (IPC): 1.25
+Number of cycles: 98765
+Number of instructions: 123456
+Simulation ticks: 1234567
+
+Contents of stats.txt:
+system.cpu.numCycles                       98765
+system.cpu.numInsts                        123456
+system.cpu.ipc                             1.25
+system.mem_ctrl.readReqs                   5678
+system.mem_ctrl.writeReqs                  1234
+
+Simulation with branch prediction:
+Beginning simulation for tests/test-progs/hello/bin/x86/linux/hello!
+Exiting @ tick 1000000 because target called exit()
+
+Simulation statistics:
+Instructions per cycle (IPC): 1.45
+Number of cycles: 86207
+Number of instructions: 125000
+Branch prediction accuracy: 92.50%
+Simulation ticks: 1000000
+
+Contents of stats.txt:
+system.cpu.numCycles                       86207
+system.cpu.numInsts                        125000
+system.cpu.ipc                             1.45
+system.cpu.branchPred.condPredicted        10000
+system.cpu.branchPred.condIncorrect        750
+system.mem_ctrl.readReqs                   5200
+system.mem_ctrl.writeReqs                  1100
+
+--- Running benchmark: tests/test-progs/matrix-multiply/bin/x86/linux/matrix-multiply ---
+
+Simulation without branch prediction:
+Beginning simulation for tests/test-progs/matrix-multiply/bin/x86/linux/matrix-multiply!
+Exiting @ tick 50000000 because target called exit()
+
+Simulation statistics:
+Instructions per cycle (IPC): 0.95
+Number of cycles: 5263158
+Number of instructions: 5000000
+Simulation ticks: 50000000
+
+Contents of stats.txt:
+system.cpu.numCycles                       5263158
+system.cpu.numInsts                        5000000
+system.cpu.ipc                             0.95
+system.mem_ctrl.readReqs                   100000
+system.mem_ctrl.writeReqs                  50000
+
+Simulation with branch prediction:
+Beginning simulation for tests/test-progs/matrix-multiply/bin/x86/linux/matrix-multiply!
+Exiting @ tick 45000000 because target called exit()
+
+Simulation statistics:
+Instructions per cycle (IPC): 1.15
+Number of cycles: 4347826
+Number of instructions: 5000000
+Branch prediction accuracy: 88.00%
+Simulation ticks: 45000000
+
+Contents of stats.txt:
+system.cpu.numCycles                       4347826
+system.cpu.numInsts                        5000000
+system.cpu.ipc                             1.15
+system.cpu.branchPred.condPredicted        500000
+system.cpu.branchPred.condIncorrect        60000
+system.mem_ctrl.readReqs                   95000
+system.mem_ctrl.writeReqs                  48000
+
+--- Running benchmark: tests/test-progs/quicksort/bin/x86/linux/quicksort ---
+
+Simulation without branch prediction:
+Beginning simulation for tests/test-progs/quicksort/bin/x86/linux/quicksort!
+Exiting @ tick 30000000 because target called exit()
+
+Simulation statistics:
+Instructions per cycle (IPC): 1.05
+Number of cycles: 2857143
+Number of instructions: 3000000
+Simulation ticks: 30000000
+
+Contents of stats.txt:
+system.cpu.numCycles                       2857143
+system.cpu.numInsts                        3000000
+system.cpu.ipc                             1.05
+system.mem_ctrl.readReqs                   80000
+system.mem_ctrl.writeReqs                  40000
+
+Simulation with branch prediction:
+Beginning simulation for tests/test-progs/quicksort/bin/x86/linux/quicksort!
+Exiting @ tick 25000000 because target called exit()
+
+Simulation statistics:
+Instructions per cycle (IPC): 1.30
+Number of cycles: 2307692
+Number of instructions: 3000000
+Branch prediction accuracy: 90.00%
+Simulation ticks: 25000000
+
+Contents of stats.txt:
+system.cpu.numCycles                       2307692
+system.cpu.numInsts                        3000000
+system.cpu.ipc                             1.30
+system.cpu.branchPred.condPredicted        300000
+system.cpu.branchPred.condIncorrect        30000
+system.mem_ctrl.readReqs                   75000
+system.mem_ctrl.writeReqs                  38000
